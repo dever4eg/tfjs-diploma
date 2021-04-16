@@ -1,7 +1,7 @@
 import {useContext, useEffect, useRef} from "react";
 import {usePoseNet} from "../hooks/usePoseNet";
 import {VideoContext} from "./Camera";
-import {drawSkeleton, drawVideo} from "./draw.js";
+import {drawSkeleton, drawVideo} from "../helpers/draw.js";
 
 function Preview (props) {
     const { width = 600, height = 600 } = props
