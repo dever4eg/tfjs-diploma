@@ -61,29 +61,25 @@ const useStyles = makeStyles((theme) => ({
 function App() {
     const classes = useStyles();
     const theme = useTheme();
-    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false);
 
     const cameraContainerRef = useRef(null)
 
     const [width, setWidth] = useState(100)
     const [height, setHeight] = useState(100)
 
+    const handleResize = () => {
+        setWidth(window.innerWidth - 348)
+        setHeight(cameraContainerRef?.current.clientHeight)
+    }
+
     useEffect(() => {
-        const handleResize = () => {
-            if (!cameraContainerRef.current) {
-                return
-            }
-
-            setWidth(window.innerWidth - 348)
-            setHeight(cameraContainerRef.current.clientHeight)
-        }
-
         handleResize()
         window.addEventListener('resize', handleResize)
         return () => {
             window.removeEventListener('resize', handleResize)
         }
-    }, [cameraContainerRef.current])
+    }, [])
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
