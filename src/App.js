@@ -1,7 +1,7 @@
 import Camera from "./components/Camera";
 import Preview from "./components/Preview";
 import CheckMediaDeviceSupport from "./components/CheckMediaDeviceSupport";
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useState} from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
@@ -16,6 +16,7 @@ import Divider from "@material-ui/core/Divider";
 import "fontsource-roboto";
 import SettingsContextProvider from "./components/SessingsContextPovider";
 import "./assets/styles/main.scss";
+import CameraContainer from "./components/CameraContainer";
 
 const drawerWidth = 300;
 
@@ -53,33 +54,12 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(3),
         height: '100%',
     },
-    cameraContainer: {
-        height: 'calc(100% - 60px)',
-    }
 }));
 
 function App() {
     const classes = useStyles();
     const theme = useTheme();
     const [mobileOpen, setMobileOpen] = useState(false);
-
-    const cameraContainerRef = useRef(null)
-
-    const [width, setWidth] = useState(100)
-    const [height, setHeight] = useState(100)
-
-    const handleResize = () => {
-        setWidth(window.innerWidth - 348)
-        setHeight(cameraContainerRef?.current.clientHeight)
-    }
-
-    useEffect(() => {
-        handleResize()
-        window.addEventListener('resize', handleResize)
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
-    }, [])
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -145,11 +125,11 @@ function App() {
                 <div className={classes.toolbar} />
                 <SettingsContextProvider>
                     <CheckMediaDeviceSupport>
-                        <div ref={cameraContainerRef} className={classes.cameraContainer}>
-                            <Camera width={width} height={height} >
-                                <Preview width={width} height={height} />
+                        <CameraContainer>
+                            <Camera>
+                                <Preview/>
                             </Camera>
-                        </div>
+                        </CameraContainer>
                     </CheckMediaDeviceSupport>
                 </SettingsContextProvider>
             </main>

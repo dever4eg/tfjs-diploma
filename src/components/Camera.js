@@ -1,5 +1,5 @@
 import { device_util } from "@tensorflow/tfjs";
-import {createContext, useEffect, useRef, useState} from "react";
+import React, {createContext, useEffect, useRef, useState} from "react";
 
 export const VideoContext = createContext({
     video: null,
@@ -35,7 +35,7 @@ function Camera(props) {
         <div>
             <video ref={videoElement} width={width} height={height} autoPlay style={{ display: 'none' }} />
             <VideoContext.Provider value={{ video: videoElement.current, videoIsLoaded }}>
-                { children }
+                {React.cloneElement(children, { width, height })}
             </VideoContext.Provider>
         </div>
     );
