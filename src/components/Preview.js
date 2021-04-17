@@ -1,7 +1,7 @@
 import {useContext, useEffect, useRef} from "react";
 import {usePoseNet} from "../hooks/usePoseNet";
 import {VideoContext} from "./Camera";
-import {drawSkeleton, drawVideo} from "../helpers/draw.js";
+import {drawKeypoints, drawSkeleton, drawVideo} from "../helpers/draw.js";
 
 function Preview (props) {
     const { width = 600, height = 600 } = props
@@ -27,11 +27,13 @@ function Preview (props) {
 
             const poses = await estimatePoses(video)
 
+            ctx.clearRect(0, 0, width, height);
             drawVideo(ctx, video, width, height)
 
             poses.forEach(({score, keypoints}) => {
                 if (score >= minPoseConfidence) {
                     drawSkeleton(keypoints, minPartConfidence, ctx);
+                    drawKeypoints(keypoints, minPartConfidence, ctx)
                 }
             });
 
