@@ -14,6 +14,7 @@ function Camera(props) {
     const [videoIsLoaded, setVideoLoaded] = useState(false)
 
     useEffect(() => {
+        setVideoLoaded(false)
         const isMobile = device_util.isMobile();
 
         (async () => {
@@ -28,7 +29,7 @@ function Camera(props) {
         })()
 
         videoElement.current.onloadedmetadata = () => setVideoLoaded(true)
-    }, []);
+    }, [width, height]);
 
     return (
         <div>

@@ -19,7 +19,12 @@ function Preview (props) {
 
         const ctx = canvasElement.current.getContext('2d');
 
+        let shouldRender = true
         const startDetection = async () => {
+            if (!shouldRender) {
+                return
+            }
+
             const poses = await estimatePoses(video)
 
             drawVideo(ctx, video, width, height)
@@ -34,7 +39,11 @@ function Preview (props) {
         }
 
         startDetection()
-    }, [modelIsLoading, videoIsLoaded])
+
+        return () => {
+            shouldRender = false
+        }
+    }, [modelIsLoading, videoIsLoaded, width, height])
 
     return (
         <div>
