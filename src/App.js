@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-function App(props) {
+function App() {
     const classes = useStyles();
     const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
