@@ -2,13 +2,13 @@ import {createContext, useState} from "react";
 
 export const SettingsContext = createContext({
     algorithm: 'ResNet50',
-    setAlgorithm: () => {},
+    setAlgorithm: null,
 })
 
 function SettingsContextProvider (props) {
     const { children } = props
 
-    const [algorithm, setAlgorithm] = useState(true)
+    const [algorithm, setAlgorithm] = useState('ResNet50')
 
     return (
         <SettingsContext.Provider value={{

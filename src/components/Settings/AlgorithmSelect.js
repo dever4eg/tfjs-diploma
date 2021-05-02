@@ -25,7 +25,7 @@ function AlgorithmSelect () {
                 labelId="algorithm-select-label"
                 id="algorithm-select"
                 value={algorithm}
-                onChange={setAlgorithm}
+                onChange={e => setAlgorithm(e.target.value)}
             >
                 <MenuItem value="ResNet50">ResNet50</MenuItem>
                 <MenuItem value="MobileNetV1">MobileNetV1</MenuItem>
