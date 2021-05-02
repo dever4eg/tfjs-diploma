@@ -1,7 +1,10 @@
 import {createContext, useState} from "react";
 
+export const ARCHITECTURE_RES_NET_50 = 'ResNet50'
+export const ARCHITECTURE_MOBILE_NET_V1 = 'MobileNetV1'
+
 export const SettingsContext = createContext({
-    architecture: 'ResNet50',
+    architecture: ARCHITECTURE_RES_NET_50,
     setArchitecture: () => {},
     settings: {}
 })
@@ -9,7 +12,7 @@ export const SettingsContext = createContext({
 function SettingsContextProvider (props) {
     const { children } = props
 
-    const [architecture, setArchitecture] = useState('ResNet50')
+    const [architecture, setArchitecture] = useState(ARCHITECTURE_RES_NET_50)
 
     const settings = { architecture }
 

@@ -4,7 +4,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import {makeStyles} from "@material-ui/core/styles";
-import {SettingsContext} from "../SessingsContextPovider";
+import {ARCHITECTURE_MOBILE_NET_V1, ARCHITECTURE_RES_NET_50, SettingsContext} from "../SessingsContextPovider";
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -18,6 +18,8 @@ function ArchitectureSelect () {
 
     const { architecture, setArchitecture } = useContext(SettingsContext)
 
+    const options = [ARCHITECTURE_MOBILE_NET_V1, ARCHITECTURE_RES_NET_50]
+
     return (
         <FormControl variant="filled" className={classes.formControl}>
             <InputLabel id="architecture-select-label">Architecture</InputLabel>
@@ -27,8 +29,9 @@ function ArchitectureSelect () {
                 value={architecture}
                 onChange={e => setArchitecture(e.target.value)}
             >
-                <MenuItem value="ResNet50">ResNet50</MenuItem>
-                <MenuItem value="MobileNetV1">MobileNetV1</MenuItem>
+                {options.map(option => (
+                    <MenuItem key={option} value={option}>{option}</MenuItem>
+                ))}
             </Select>
         </FormControl>
     )
