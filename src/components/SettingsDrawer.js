@@ -1,10 +1,10 @@
 import React from "react";
-import AlgorithmSelect from "./Settings/AlgorithmSelect";
+import ArchitectureSelect from "./Settings/ArchitectureSelect";
 
 function SettingsDrawer () {
     return (
         <>
-            <AlgorithmSelect />
+            <ArchitectureSelect />
         </>
     )
 }

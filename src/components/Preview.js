@@ -2,13 +2,15 @@ import {useContext, useEffect, useRef} from "react";
 import {usePoseNet} from "../hooks/usePoseNet";
 import {VideoContext} from "./Camera";
 import {drawKeypoints, drawSkeleton, drawVideo} from "../helpers/draw.js";
+import {SettingsContext} from "./SessingsContextPovider";
 
 function Preview (props) {
     const { width = 600, height = 600 } = props
 
     const { videoIsLoaded, video } = useContext(VideoContext)
+    const { settings } = useContext(SettingsContext)
     const canvasElement = useRef(null);
-    const { estimatePoses, loading: modelIsLoading } = usePoseNet()
+    const { estimatePoses, loading: modelIsLoading } = usePoseNet(settings)
     const minPoseConfidence = 0.1
     const minPartConfidence = 0.5
 

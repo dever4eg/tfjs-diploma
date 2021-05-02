@@ -1,8 +1,10 @@
 import * as poseNet from "@tensorflow-models/posenet";
 import {useEffect, useRef, useState} from "react";
 
-export const usePoseNet = () => {
+export const usePoseNet = (settings) => {
     const [loading, setLoading] = useState(true)
+
+    const { architecture } = settings
 
     const net = useRef(null)
 
@@ -10,15 +12,15 @@ export const usePoseNet = () => {
         (async () => {
             setLoading(true)
             net.current = await poseNet.load({
-                architecture: 'ResNet50',
-                outputStride: 32,
+                architecture: architecture,
+                outputStride: architecture === 'ResNet50' ? 32 : 16,
                 inputResolution: 250,
                 multiplier: 1,
                 quantBytes: 2,
             })
             setLoading(false)
         })()
-    }, [])
+    }, [architecture])
 
     const estimatePoses = (video) => {
         return net.current.estimatePoses(video, {

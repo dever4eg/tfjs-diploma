@@ -1,18 +1,21 @@
 import {createContext, useState} from "react";
 
 export const SettingsContext = createContext({
-    algorithm: 'ResNet50',
-    setAlgorithm: null,
+    architecture: 'ResNet50',
+    setArchitecture: () => {},
+    settings: {}
 })
 
 function SettingsContextProvider (props) {
     const { children } = props
 
-    const [algorithm, setAlgorithm] = useState('ResNet50')
+    const [architecture, setArchitecture] = useState('ResNet50')
+
+    const settings = { architecture }
 
     return (
         <SettingsContext.Provider value={{
-            algorithm, setAlgorithm,
+            architecture, setArchitecture, settings,
         }}>
             {children}
         </SettingsContext.Provider>

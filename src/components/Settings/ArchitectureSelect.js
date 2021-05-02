@@ -13,19 +13,19 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-function AlgorithmSelect () {
+function ArchitectureSelect () {
     const classes = useStyles()
 
-    const { algorithm, setAlgorithm } = useContext(SettingsContext)
+    const { architecture, setArchitecture } = useContext(SettingsContext)
 
     return (
         <FormControl variant="filled" className={classes.formControl}>
-            <InputLabel id="algorithm-select-label">Algorithm</InputLabel>
+            <InputLabel id="architecture-select-label">Architecture</InputLabel>
             <Select
-                labelId="algorithm-select-label"
-                id="algorithm-select"
-                value={algorithm}
-                onChange={e => setAlgorithm(e.target.value)}
+                labelId="architecture-select-label"
+                id="architecture-select"
+                value={architecture}
+                onChange={e => setArchitecture(e.target.value)}
             >
                 <MenuItem value="ResNet50">ResNet50</MenuItem>
                 <MenuItem value="MobileNetV1">MobileNetV1</MenuItem>
@@ -34,4 +34,4 @@ function AlgorithmSelect () {
     )
 }
 
-export default AlgorithmSelect;
+export default ArchitectureSelect;
