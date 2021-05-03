@@ -4,7 +4,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import {makeStyles} from "@material-ui/core/styles";
-import {SettingsContext} from "../SessingsContextPovider";
+import {ARCHITECTURE_OUTPUT_STRIDE_OPTIONS_MAP, SettingsContext} from "../SessingsContextPovider";
 
 const useStyles = makeStyles((theme) => ({
     formControl: {
@@ -13,21 +13,21 @@ const useStyles = makeStyles((theme) => ({
     },
 }))
 
-const options = [50, 100, 200, 300, 500, 700, 1000]
-
-function InputResolutionSelect () {
+function OutputStrideSelect () {
     const classes = useStyles()
 
-    const { inputResolution, setInputResolution } = useContext(SettingsContext)
+    const { architecture, outputStride, setOutputStride } = useContext(SettingsContext)
+
+    const options = ARCHITECTURE_OUTPUT_STRIDE_OPTIONS_MAP[architecture]
 
     return (
         <FormControl variant="filled" className={classes.formControl}>
-            <InputLabel id="input-resolution-select-label">Input Resolution</InputLabel>
+            <InputLabel id="output-stride-select-label">Output Stride</InputLabel>
             <Select
-                labelId="input-resolution-select-label"
-                id="input-resolution-select"
-                value={inputResolution}
-                onChange={e => setInputResolution(e.target.value)}
+                labelId="output-stride-select-label"
+                id="output-stride-select"
+                value={outputStride}
+                onChange={e => setOutputStride(e.target.value)}
             >
                 {options.map(option => (
                     <MenuItem key={option} value={option}>{option}</MenuItem>
@@ -37,4 +37,4 @@ function InputResolutionSelect () {
     )
 }
 
-export default InputResolutionSelect;
+export default OutputStrideSelect;
