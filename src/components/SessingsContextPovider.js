@@ -5,7 +5,7 @@ export const ARCHITECTURE_MOBILE_NET_V1 = 'MobileNetV1'
 
 export const ARCHITECTURE_OUTPUT_STRIDE_OPTIONS_MAP = {
     [ARCHITECTURE_RES_NET_50]: [16, 32],
-    [ARCHITECTURE_MOBILE_NET_V1]: [8, 16, 32],
+    [ARCHITECTURE_MOBILE_NET_V1]: [8, 16],
 }
 
 export const SettingsContext = createContext({
@@ -15,6 +15,8 @@ export const SettingsContext = createContext({
     setInputResolution: () => {},
     outputStride: null,
     setOutputStride: () => {},
+    multiplier: null,
+    setMultiplier: () => {},
     settings: {}
 })
 
@@ -24,8 +26,9 @@ function SettingsContextProvider (props) {
     const [architecture, setArchitecture] = useState(ARCHITECTURE_RES_NET_50)
     const [inputResolution, setInputResolution] = useState(200)
     const [outputStride, setOutputStride] = useState(16)
+    const [multiplier, setMultiplier] = useState(1.0)
 
-    const settings = { architecture, inputResolution, outputStride }
+    const settings = { architecture, inputResolution, outputStride, multiplier }
 
     useEffect(() => {
         const options = ARCHITECTURE_OUTPUT_STRIDE_OPTIONS_MAP[architecture]
@@ -34,10 +37,16 @@ function SettingsContextProvider (props) {
         }
     }, [architecture])
 
+    useEffect(() => {
+        if (architecture === ARCHITECTURE_RES_NET_50) {
+            setMultiplier(1.0)
+        }
+    }, [architecture])
+
     return (
         <SettingsContext.Provider value={{
             architecture, setArchitecture, settings, inputResolution, setInputResolution,
-            outputStride, setOutputStride
+            outputStride, setOutputStride, multiplier, setMultiplier
         }}>
             {children}
         </SettingsContext.Provider>
