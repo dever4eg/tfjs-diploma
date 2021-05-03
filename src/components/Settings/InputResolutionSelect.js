@@ -3,15 +3,8 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import {makeStyles} from "@material-ui/core/styles";
 import {SettingsContext} from "../SessingsContextPovider";
-
-const useStyles = makeStyles((theme) => ({
-    formControl: {
-        margin: theme.spacing(2),
-        minWidth: 260,
-    },
-}))
+import {useStyles} from "./styles";
 
 const options = [50, 100, 200, 300, 500, 700, 1000]
 
