@@ -23,7 +23,7 @@ function Preview (props) {
 
         let shouldRender = true
         const startDetection = async () => {
-            if (!shouldRender) {
+            if (!shouldRender || modelIsLoading) {
                 return
             }
 

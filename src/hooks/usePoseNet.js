@@ -11,6 +11,9 @@ export const usePoseNet = (settings) => {
     useEffect(() => {
         (async () => {
             setLoading(true)
+            net.current?.dispose()
+            net.current = null
+
             net.current = await poseNet.load({
                 architecture: architecture,
                 outputStride: architecture === 'ResNet50' ? 32 : 16,
@@ -18,6 +21,7 @@ export const usePoseNet = (settings) => {
                 multiplier: 1,
                 quantBytes: 2,
             })
+
             setLoading(false)
         })()
     }, [architecture, inputResolution])
