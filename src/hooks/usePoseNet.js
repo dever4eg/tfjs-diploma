@@ -4,7 +4,7 @@ import {useEffect, useRef, useState} from "react";
 export const usePoseNet = (settings) => {
     const [loading, setLoading] = useState(true)
 
-    const { architecture } = settings
+    const { architecture, inputResolution } = settings
 
     const net = useRef(null)
 
@@ -14,13 +14,13 @@ export const usePoseNet = (settings) => {
             net.current = await poseNet.load({
                 architecture: architecture,
                 outputStride: architecture === 'ResNet50' ? 32 : 16,
-                inputResolution: 250,
+                inputResolution,
                 multiplier: 1,
                 quantBytes: 2,
             })
             setLoading(false)
         })()
-    }, [architecture])
+    }, [architecture, inputResolution])
 
     const estimatePoses = (video) => {
         return net.current.estimatePoses(video, {
