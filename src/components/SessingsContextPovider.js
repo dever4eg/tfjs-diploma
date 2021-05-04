@@ -23,25 +23,31 @@ export const SettingsContext = createContext({
 function SettingsContextProvider (props) {
     const { children } = props
 
-    const [architecture, setArchitecture] = useState(ARCHITECTURE_RES_NET_50)
+    const [architecture, setArchitectureState] = useState(ARCHITECTURE_RES_NET_50)
     const [inputResolution, setInputResolution] = useState(200)
     const [outputStride, setOutputStride] = useState(16)
     const [multiplier, setMultiplier] = useState(1.0)
 
-    const settings = { architecture, inputResolution, outputStride, multiplier }
-
-    useEffect(() => {
+    const ensureOutputStrideCompatibleWithArchitecture = (architecture) => {
         const options = ARCHITECTURE_OUTPUT_STRIDE_OPTIONS_MAP[architecture]
         if (!options.includes(outputStride)) {
             setOutputStride(options[0])
         }
-    }, [architecture])
+    }
 
-    useEffect(() => {
+    const ensureMultiplierCompatibleWithArchitecture = (architecture) => {
         if (architecture === ARCHITECTURE_RES_NET_50) {
             setMultiplier(1.0)
         }
-    }, [architecture])
+    }
+
+    const setArchitecture = (architecture) => {
+        ensureOutputStrideCompatibleWithArchitecture(architecture)
+        ensureMultiplierCompatibleWithArchitecture(architecture)
+        setArchitectureState(architecture)
+    }
+
+    const settings = { architecture, inputResolution, outputStride, multiplier }
 
     return (
         <SettingsContext.Provider value={{

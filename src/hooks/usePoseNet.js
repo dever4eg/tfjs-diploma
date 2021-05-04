@@ -27,6 +27,10 @@ export const usePoseNet = (settings) => {
     }, [architecture, inputResolution, outputStride, multiplier])
 
     const estimatePoses = (video) => {
+        if (null == net.current || loading) {
+            return []
+        }
+
         return net.current.estimatePoses(video, {
             flipHorizontal: true,
             decodingMethod: 'single-person'
