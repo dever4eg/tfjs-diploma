@@ -1,5 +1,6 @@
 import * as poseNet from "@tensorflow-models/posenet";
 import {useEffect, useRef, useState} from "react";
+import AsyncLock from "async-lock";
 
 export const usePoseNet = (settings) => {
     const [loading, setLoading] = useState(true)
@@ -7,23 +8,27 @@ export const usePoseNet = (settings) => {
     const { architecture, inputResolution, outputStride, multiplier } = settings
 
     const net = useRef(null)
+    const lock = useRef(new AsyncLock())
 
     useEffect(() => {
-        (async () => {
+        lock.current.acquire('load-model', async () => {
             setLoading(true)
-            net.current?.dispose()
-            net.current = null
-
-            net.current = await poseNet.load({
+            const model = await poseNet.load({
                 architecture,
                 outputStride,
                 inputResolution,
                 multiplier,
                 quantBytes: 2,
             })
-
+            net.current?.dispose()
+            net.current = model
             setLoading(false)
-        })()
+        }, null, {})
+
+        return () => {
+            net.current?.dispose()
+            net.current = null
+        }
     }, [architecture, inputResolution, outputStride, multiplier])
 
     const estimatePoses = (video) => {
