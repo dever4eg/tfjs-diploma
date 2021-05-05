@@ -15,22 +15,24 @@ function Preview (props) {
     const minPartConfidence = 0.5
 
     useEffect(() => {
-        if (!videoIsLoaded || modelIsLoading) {
-            return
-        }
-
         const ctx = canvasElement.current.getContext('2d');
 
         let shouldRender = true
         const startDetection = async () => {
-            if (!shouldRender || modelIsLoading) {
+            if (!shouldRender) {
                 return
             }
 
-            const poses = await estimatePoses(video)
+            let poses = []
+            if (videoIsLoaded && !modelIsLoading) {
+                poses = await estimatePoses(video)
+            }
 
             ctx.clearRect(0, 0, width, height);
-            drawVideo(ctx, video, width, height)
+
+            if (videoIsLoaded) {
+                drawVideo(ctx, video, width, height)
+            }
 
             poses.forEach(({score, keypoints}) => {
                 if (score >= minPoseConfidence) {
