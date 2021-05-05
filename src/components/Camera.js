@@ -14,11 +14,10 @@ function Camera(props) {
     const [videoIsLoaded, setVideoLoaded] = useState(false)
 
     useEffect(() => {
-        setVideoLoaded(false)
         const isMobile = device_util.isMobile();
 
         (async () => {
-            videoElement.current.srcObject = await navigator.mediaDevices.getUserMedia({
+            const src = await navigator.mediaDevices.getUserMedia({
                 'audio': false,
                 'video': {
                     facingMode: 'user',
@@ -26,9 +25,14 @@ function Camera(props) {
                     height: isMobile ? undefined : height,
                 },
             })
+            setVideoLoaded(false)
+            videoElement.current.srcObject = src
+            videoElement.current.onloadedmetadata = () => setVideoLoaded(true)
         })()
 
-        videoElement.current.onloadedmetadata = () => setVideoLoaded(true)
+        return () => {
+            videoElement.current.onloadedmetadata = () => {}
+        }
     }, [width, height]);
 
     return (
