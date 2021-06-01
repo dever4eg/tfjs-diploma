@@ -82,7 +82,7 @@ function AppLayout(props) {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        Human Position Rekognition
+                        Розпізнавання позиції людини
                     </Typography>
                 </Toolbar>
             </AppBar>

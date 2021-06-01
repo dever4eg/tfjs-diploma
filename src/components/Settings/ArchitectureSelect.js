@@ -15,7 +15,7 @@ function ArchitectureSelect () {
 
     return (
         <FormControl variant="filled" className={classes.formControl}>
-            <InputLabel id="architecture-select-label">Architecture</InputLabel>
+            <InputLabel id="architecture-select-label">Архітектура</InputLabel>
             <Select
                 labelId="architecture-select-label"
                 id="architecture-select"

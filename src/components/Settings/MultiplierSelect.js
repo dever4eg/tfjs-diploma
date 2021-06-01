@@ -19,7 +19,7 @@ function MultiplierSelect () {
 
     return (
         <FormControl variant="filled" className={classes.formControl}>
-            <InputLabel id="multiplier-select-label">Multiplier</InputLabel>
+            <InputLabel id="multiplier-select-label">Множник (Тільки MobileNet)</InputLabel>
             <Select
                 labelId="multiplier-select-label"
                 id="multiplier-select"

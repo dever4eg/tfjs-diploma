@@ -15,7 +15,7 @@ function OutputStrideSelect () {
 
     return (
         <FormControl variant="filled" className={classes.formControl}>
-            <InputLabel id="output-stride-select-label">Output Stride</InputLabel>
+            <InputLabel id="output-stride-select-label">Вихідний крок</InputLabel>
             <Select
                 labelId="output-stride-select-label"
                 id="output-stride-select"

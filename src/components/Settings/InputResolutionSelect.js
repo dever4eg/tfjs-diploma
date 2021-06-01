@@ -15,7 +15,7 @@ function InputResolutionSelect () {
 
     return (
         <FormControl variant="filled" className={classes.formControl}>
-            <InputLabel id="input-resolution-select-label">Input Resolution</InputLabel>
+            <InputLabel id="input-resolution-select-label">Вхідна роздільна здатність</InputLabel>
             <Select
                 labelId="input-resolution-select-label"
                 id="input-resolution-select"
