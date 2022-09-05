@@ -16,6 +16,21 @@ The results of the study can be used in research institutions or in the developm
 of web applications that use machine learning functions to recognize a person's
 position.
 
+## Requirements
+
+These technologies should
+to be used for training robots that are able to replace a person in various processes
+in production. Or recognition of the position should be put as a basis
+entertainment applications, for example, as a contactless control system in
+computer games.
+
+The user must trust the program and not be afraid to use it.
+
+The program must provide all the basic needs of the user and not implement features that are unnecessary for him.
+
+The program should allow for changes and additions.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
