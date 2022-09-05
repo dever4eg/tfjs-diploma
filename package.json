@@ -42,5 +42,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "The object of research is the methods of human pose recognition.\r The aim of the work is to study approaches to recognizing a person's position, to\r study the process of recognition on the web platform by creating a software application\r using TensorFlow.js.\r Research methods are methods of algorithm theory, methods of object-oriented\r programming, methods of functional programming, machine learning methods,\r methods of researching the effectiveness of machine learning models, the method of\r comparative analysis.\r As a result of the work, the current state of research on the topic of human pose\r recognition was analyzed and a method suitable for use in the web platform was\r chosen. The characteristics of the model when used with different parameters were\r investigated.\r The results of the study can be used in research institutions or in the development\r of web applications that use machine learning functions to recognize a person's\r position.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owner6/tfjs-diploma.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/owner6/tfjs-diploma/issues"
+  },
+  "homepage": "https://github.com/owner6/tfjs-diploma#readme"
 }
