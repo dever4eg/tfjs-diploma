@@ -1,3 +1,21 @@
+# Recognition of human positions
+
+The object of research is the methods of human pose recognition.
+The aim of the work is to study approaches to recognizing a person's position, to
+study the process of recognition on the web platform by creating a software application
+using TensorFlow.js.
+Research methods are methods of algorithm theory, methods of object-oriented
+programming, methods of functional programming, machine learning methods,
+methods of researching the effectiveness of machine learning models, the method of
+comparative analysis.
+As a result of the work, the current state of research on the topic of human pose
+recognition was analyzed and a method suitable for use in the web platform was
+chosen. The characteristics of the model when used with different parameters were
+investigated.
+The results of the study can be used in research institutions or in the development
+of web applications that use machine learning functions to recognize a person's
+position.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
