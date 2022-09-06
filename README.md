@@ -69,7 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-#Screenshots
+# Screenshots
 
 [1st person position recognition](https://github.com/owner6/tfjs-diploma/blob/master/screenshots/photo_2022-09-06_02-51-03.jpg)
 [recognition of the position of several people at once](https://github.com/owner6/tfjs-diploma/blob/master/screenshots/photo_2022-09-06_02-51-03%20(2).jpg)
