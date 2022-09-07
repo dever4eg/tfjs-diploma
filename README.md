@@ -1,3 +1,15 @@
+# Recognition of human positions
+The object of research is the methods of human pose recognition. The aim of the work is to study approaches to recognizing a person's position, to study the process of recognition on the web platform by creating a software application using TensorFlow.js. Research methods are methods of algorithm theory, methods of object-oriented programming, methods of functional programming, machine learning methods, methods of researching the effectiveness of machine learning models, the method of comparative analysis. As a result of the work, the current state of research on the topic of human pose recognition was analyzed and a method suitable for use in the web platform was chosen. The characteristics of the model when used with different parameters were investigated. The results of the study can be used in research institutions or in the development of web applications that use machine learning functions to recognize a person's position.
+
+# Requirements
+These technologies should to be used for training robots that are able to replace a person in various processes in production. Or recognition of the position should be put as a basis entertainment applications, for example, as a contactless control system in computer games.
+
+The user must trust the program and not be afraid to use it.
+
+The program must provide all the basic needs of the user and not implement features that are unnecessary for him.
+
+The program should allow for changes and additions.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +80,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Screenshots
+
+![1st person position recognition](https://github.com/owner6/tfjs-diploma/blob/master/screenshots/photo_2022-09-06_02-51-03.jpg)
+![recognition of the position of several people at once](https://github.com/owner6/tfjs-diploma/blob/master/screenshots/photo_2022-09-06_02-51-03%20(2).jpg)
+![architecture resNet50](https://github.com/owner6/tfjs-diploma/blob/master/screenshots/photo_2022-09-06_02-56-46.jpg)
+![architecture mobileNetV1](https://github.com/owner6/tfjs-diploma/blob/master/screenshots/photo_2022-09-06_02-57-10.jpg)
+
