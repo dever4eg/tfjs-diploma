@@ -87,4 +87,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ![recognition of the position of several people at once](https://github.com/owner6/tfjs-diploma/blob/master/screenshots/photo_2022-09-06_02-51-03%20(2).jpg)
 ![architecture resNet50](https://github.com/owner6/tfjs-diploma/blob/master/screenshots/photo_2022-09-06_02-56-46.jpg)
 ![architecture mobileNetV1](https://github.com/owner6/tfjs-diploma/blob/master/screenshots/photo_2022-09-06_02-57-10.jpg)
-![the code](https://github.com/owner6/tfjs-diploma/blob/master/screenshots/photo_2022-09-06_02-59-25.jpg)
+
