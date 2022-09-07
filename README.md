@@ -1,3 +1,28 @@
+# Human position recognition program
+
+The program tracks every minor human movement and performs biomechanical analysis in real time.
+  Formally speaking, posture assessment is the prediction of a person's body part or joint positions based on an image or video.
+  
+  Human pose estimation is widely used in many applications
+areas, some of which are listed below:
+1) Assessment of human activity.
+2) Motion transfer and augmented reality.
+3) Educational works.
+4) Motion tracking for consoles.
+5) Detecting a person's fall.
+Assessment of human activity. A fairly obvious application of posture assessment
+is the tracking and measurement of human activity and movement. Such architectures as
+DensePose, PoseNet or OpenPose are often used for recognition
+activity, gestures or gait. Examples of tracking human activity by
+using posture assessment include:
+1) Application for detection of sitting gestures.
+2) The language of communication with gestures (for example, traffic police signals).
+3) Programs to detect if a person has fallen or is sick.
+4) Applications to support the analysis of football, basketball and other sports.
+5) Programs for analyzing dance techniques (for example, in ballet
+dances).
+6) Surveillance and security enhancement programs
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
