@@ -1,27 +1,14 @@
-# Human position recognition program
+# Recognition of human positions
+The object of research is the methods of human pose recognition. The aim of the work is to study approaches to recognizing a person's position, to study the process of recognition on the web platform by creating a software application using TensorFlow.js. Research methods are methods of algorithm theory, methods of object-oriented programming, methods of functional programming, machine learning methods, methods of researching the effectiveness of machine learning models, the method of comparative analysis. As a result of the work, the current state of research on the topic of human pose recognition was analyzed and a method suitable for use in the web platform was chosen. The characteristics of the model when used with different parameters were investigated. The results of the study can be used in research institutions or in the development of web applications that use machine learning functions to recognize a person's position.
 
-The program tracks every minor human movement and performs biomechanical analysis in real time.
-  Formally speaking, posture assessment is the prediction of a person's body part or joint positions based on an image or video.
-  
-  Human pose estimation is widely used in many applications
-areas, some of which are listed below:
-1) Assessment of human activity.
-2) Motion transfer and augmented reality.
-3) Educational works.
-4) Motion tracking for consoles.
-5) Detecting a person's fall.
-Assessment of human activity. A fairly obvious application of posture assessment
-is the tracking and measurement of human activity and movement. Such architectures as
-DensePose, PoseNet or OpenPose are often used for recognition
-activity, gestures or gait. Examples of tracking human activity by
-using posture assessment include:
-1) Application for detection of sitting gestures.
-2) The language of communication with gestures (for example, traffic police signals).
-3) Programs to detect if a person has fallen or is sick.
-4) Applications to support the analysis of football, basketball and other sports.
-5) Programs for analyzing dance techniques (for example, in ballet
-dances).
-6) Surveillance and security enhancement programs
+# Requirements
+These technologies should to be used for training robots that are able to replace a person in various processes in production. Or recognition of the position should be put as a basis entertainment applications, for example, as a contactless control system in computer games.
+
+The user must trust the program and not be afraid to use it.
+
+The program must provide all the basic needs of the user and not implement features that are unnecessary for him.
+
+The program should allow for changes and additions.
 
 # Getting Started with Create React App
 
