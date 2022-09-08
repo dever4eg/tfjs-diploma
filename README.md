@@ -1,16 +1,18 @@
 # Recognition of human positions
+
 This program can be used to train robots that can replace humans in various production processes. Alternatively, position recognition may be the basis
 entertainment applications, for example, as a contactless control system in
 computer games.
+
 # Screenhots
 
 ![1st person position recognition](screenshots/single-person.jpg)
 
 ![recognition of the position of several people at once](screenshots/multi-person.jpg)
 
-## The library that is used in the project
-https://www.npmjs.com/package/@tensorflow-models/posenet
+# The library that is used in the project
 
+https://www.npmjs.com/package/@tensorflow-models/posenet
 
 # Getting Started with Create React App
 
