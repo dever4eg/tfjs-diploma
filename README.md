@@ -16,8 +16,7 @@ The program should allow for changes and additions.
 # Screenhots
 ![1st person position recognition](https://github.com/owner6/tfjs-diploma/blob/main/screenshots/photo_2022-09-06_02-51-03.jpg)
 ![recognition of the position of several people at once](https://github.com/owner6/tfjs-diploma/blob/main/screenshots/photo_2022-09-06_02-51-03%20(2).jpg)
-![architecture resNet50](https://github.com/owner6/tfjs-diploma/blob/main/screenshots/photo_2022-09-06_02-56-46.jpg)
-![architecture mobileNetV1](https://github.com/owner6/tfjs-diploma/blob/main/screenshots/photo_2022-09-06_02-57-10.jpg)
+
 
 # Getting Started with Create React App
 
