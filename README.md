@@ -1,3 +1,24 @@
+# Recognition of human positions
+This program can be used to train robots that can replace humans in various production processes. Alternatively, position recognition may be the basis
+entertainment applications, for example, as a contactless control system in
+computer games.
+
+# Requirements
+These technologies should to be used for training robots that are able to replace a person in various processes in production. Or recognition of the position should be put as a basis entertainment applications, for example, as a contactless control system in computer games.
+
+The user must trust the program and not be afraid to use it.
+
+The program must provide all the basic needs of the user and not implement features that are unnecessary for him.
+
+The program should allow for changes and additions.
+
+
+# Screenhots
+![1st person position recognition](https://github.com/owner6/tfjs-diploma/blob/main/screenshots/photo_2022-09-06_02-51-03.jpg)
+![recognition of the position of several people at once](https://github.com/owner6/tfjs-diploma/blob/main/screenshots/photo_2022-09-06_02-51-03%20(2).jpg)
+![architecture resNet50](https://github.com/owner6/tfjs-diploma/blob/main/screenshots/photo_2022-09-06_02-56-46.jpg)
+![architecture mobileNetV1](https://github.com/owner6/tfjs-diploma/blob/main/screenshots/photo_2022-09-06_02-57-10.jpg)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
