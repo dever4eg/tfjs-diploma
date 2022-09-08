@@ -4,11 +4,11 @@ entertainment applications, for example, as a contactless control system in
 computer games.
 # Screenhots
 
-![1st person position recognition](https://github.com/owner6/tfjs-diploma/blob/feature-readmeMD/screenshots/photo_2022-09-06_02-51-03%20(2).jpg)
+![1st person position recognition](images/screenshots/single-person.jpg)
 
-![recognition of the position of several people at once](https://github.com/owner6/tfjs-diploma/blob/feature-readmeMD/screenshots/photo_2022-09-06_02-51-03.jpg)
+![recognition of the position of several people at once](images/screenshots/multi-person.jpg)
 
-# The library that is used in the project
+## The library that is used in the project
 https://www.npmjs.com/package/@tensorflow-models/posenet
 
 
