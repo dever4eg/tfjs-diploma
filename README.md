@@ -9,7 +9,7 @@ computer games.
 ![recognition of the position of several people at once](https://github.com/owner6/tfjs-diploma/blob/feature-readmeMD/screenshots/photo_2022-09-06_02-51-03.jpg)
 
 # The library that is used in the project
-https://github.com/owner6/tfjs-diploma/blob/feature-readmeMD/src/hooks/usePoseNet.js
+https://www.npmjs.com/package/@tensorflow-models/posenet
 
 
 # Getting Started with Create React App
